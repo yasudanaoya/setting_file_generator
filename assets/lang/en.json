@@ -3,5 +3,11 @@
     "desc": {
       "whiteSpace": "Remove wasted space at the end of sentences when saving"
     }
+  },
+
+  "commons": {
+    "buttons": {
+      "translations": "Translations"
+    }
   }
 }
