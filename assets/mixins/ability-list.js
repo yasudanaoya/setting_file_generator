@@ -4,7 +4,7 @@ export default {
       return [
         {
           key: "whiteSpace",
-          desc: "保存時に、文末の無駄なスペースを削除する"
+          desc: this.$t("ability.desc.whiteSpace")
         }
       ];
     }
