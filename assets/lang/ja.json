@@ -1,0 +1,13 @@
+{
+  "ability": {
+    "desc": {
+      "whiteSpace": "保存時に、文末の無駄なスペースを削除する"
+    }
+  },
+
+  "commons": {
+    "buttons": {
+      "translations": "言語"
+    }
+  }
+}

@@ -50,7 +50,32 @@ module.exports = {
     "@nuxtjs/axios",
     "@nuxtjs/pwa",
     // Doc: https://github.com/nuxt-community/dotenv-module
-    "@nuxtjs/dotenv"
+    "@nuxtjs/dotenv",
+    // Doc: https://nuxt-community.github.io/nuxt-i18n/
+    [
+      "nuxt-i18n",
+      {
+        locales: [
+          {
+            code: "en",
+            name: "English",
+            iso: "en",
+            file: "en.json"
+          },
+          {
+            code: "ja",
+            name: "Japanese",
+            iso: "ja",
+            file: "ja.json"
+          }
+        ],
+        strategy: "prefix_and_default",
+        vueI18nLoader: true,
+        defaultLocale: "ja",
+        lazy: true,
+        langDir: "./assets/lang/"
+      }
+    ]
   ],
   /*
    ** Axios module configuration
