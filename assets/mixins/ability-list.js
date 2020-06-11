@@ -4,7 +4,13 @@ export default {
       return [
         {
           key: "whiteSpace",
-          desc: this.$t("ability.desc.whiteSpace")
+          value: false,
+          type: "checkbox"
+        },
+        {
+          key: "tabSize",
+          value: 2,
+          type: "number"
         }
       ];
     }

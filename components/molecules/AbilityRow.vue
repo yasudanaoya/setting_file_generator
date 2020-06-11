@@ -3,7 +3,15 @@
     td
     td
       input(
+        v-if="isCheckbox"
         type="checkbox"
+        :value="ability.value"
+        @change="onChange"
+      )
+      input(
+        v-else-if="isNumber"
+        type="number"
+        :value="ability.value"
         @change="onChange"
       )
     td {{ getDescription }}
@@ -11,11 +19,7 @@
 </template>
 
 <script>
-import abilityList from "@/assets/mixins/ability-list";
-
 export default {
-  mixins: [abilityList],
-
   props: {
     ability: {
       type: Object,
@@ -32,15 +36,24 @@ export default {
       required: true
     }
   },
+
   computed: {
+    isCheckbox() {
+      return this.ability.type === "checkbox";
+    },
+    isNumber() {
+      return this.ability.type === "number";
+    },
     getDescription() {
-      return this.getAbilities().find(value => value.key === this.ability.kind)
-        .desc;
+      const key = "ability.desc." + this.ability.key;
+      return this.$t(key);
     }
   },
 
   methods: {
-    onChange() {}
+    onChange(e) {
+      // e.target.value
+    }
   }
 };
 </script>

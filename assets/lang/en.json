@@ -1,7 +1,8 @@
 {
   "ability": {
     "desc": {
-      "whiteSpace": "Remove wasted space at the end of sentences when saving"
+      "whiteSpace": "Remove wasted space at the end of sentences when saving",
+      "tabSize": "Number of spaces, equivalent to one tab"
     }
   },
 
