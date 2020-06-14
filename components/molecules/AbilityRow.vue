@@ -13,6 +13,7 @@
         type="number"
         v-model="value"
         @change="onChange"
+        step="2"
       )
     td {{ getDescription }}
 
@@ -67,11 +68,13 @@ export default {
       changeSetting: "settings/changeSetting"
     }),
     onChange() {
+      if (this.isNumber) this.value = Number(this.value);
       const param = {
         key: this.ability.key,
         value: this.value
       };
       this.changeSetting(param);
+      this.$emit("on-change");
     }
   }
 };

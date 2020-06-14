@@ -1,7 +1,7 @@
 <template lang="pug">
-  .settings-json
-    pre
-      code(class="lang-json")
+  .settings-json(v-if="renderComponent")
+    pre(class="language-json")
+      code
         | {{ settingsJson }}
 </template>
 
@@ -9,6 +9,11 @@
 import Prism from "~/plugins/prism.js";
 
 export default {
+  data() {
+    return {
+      renderComponent: true
+    };
+  },
   computed: {
     settingsJson() {
       return this.$store.state.settings.settingsJson;
@@ -16,6 +21,18 @@ export default {
   },
   mounted() {
     Prism.highlightAll();
+  },
+
+  methods: {
+    reRender() {
+      this.renderComponent = false;
+      this.$nextTick(() => {
+        this.renderComponent = true;
+      });
+      this.$nextTick(() => {
+        Prism.highlightAll();
+      });
+    }
   }
 };
 </script>

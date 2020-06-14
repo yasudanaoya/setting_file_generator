@@ -11,6 +11,7 @@
         :ability="ability"
         :index="index"
         :checkedVal="checkedVal"
+        @on-change="onChange"
       )
 </template>
 
@@ -33,6 +34,12 @@ export default {
 
   created() {
     this.abilities = this.getAbilities();
+  },
+
+  methods: {
+    onChange() {
+      this.$emit("on-change");
+    }
   }
 };
 </script>

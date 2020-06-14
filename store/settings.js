@@ -1,5 +1,3 @@
-import Prism from "~/plugins/prism.js";
-
 export const state = () => ({
   settingsJson: {
     "files.trimTrailingWhitespace": true,
@@ -12,6 +10,5 @@ export const mutations = {
   changeSetting(state, param) {
     const index = state.settingsList.indexOf(param.key);
     state.settingsJson[Object.keys(state.settingsJson)[index]] = param.value;
-    Prism.highlightAll();
   }
 };

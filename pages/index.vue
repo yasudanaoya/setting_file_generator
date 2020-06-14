@@ -1,7 +1,11 @@
 <template lang="pug">
   .page-top
-    ability-field
-    settings-json
+    ability-field(
+      @on-change="onChange"
+    )
+    settings-json(
+      ref="settings"
+    )
 </template>
 
 <script>
@@ -12,6 +16,12 @@ export default {
   components: {
     AbilityField,
     SettingsJson
+  },
+
+  methods: {
+    onChange() {
+      this.$refs.settings.reRender();
+    }
   }
 };
 </script>
