@@ -3,8 +3,14 @@ export default {
     getAbilities() {
       return [
         {
-          key: "whiteSpace",
-          desc: this.$t("ability.desc.whiteSpace")
+          key: "trimWhiteSpace",
+          value: true,
+          type: "checkbox"
+        },
+        {
+          key: "tabSize",
+          value: 2,
+          type: "number"
         }
       ];
     }
