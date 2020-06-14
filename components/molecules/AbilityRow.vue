@@ -5,13 +5,13 @@
       input(
         v-if="isCheckbox"
         type="checkbox"
-        :value="ability.value"
+        v-model="value"
         @change="onChange"
       )
       input(
         v-else-if="isNumber"
         type="number"
-        :value="ability.value"
+        v-model="value"
         @change="onChange"
       )
     td {{ getDescription }}
@@ -19,6 +19,8 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
+
 export default {
   props: {
     ability: {
@@ -37,6 +39,12 @@ export default {
     }
   },
 
+  data() {
+    return {
+      value: null
+    };
+  },
+
   computed: {
     isCheckbox() {
       return this.ability.type === "checkbox";
@@ -50,9 +58,20 @@ export default {
     }
   },
 
+  mounted() {
+    this.value = this.ability.value;
+  },
+
   methods: {
-    onChange(e) {
-      // e.target.value
+    ...mapMutations({
+      changeSetting: "settings/changeSetting"
+    }),
+    onChange() {
+      const param = {
+        key: this.ability.key,
+        value: this.value
+      };
+      this.changeSetting(param);
     }
   }
 };

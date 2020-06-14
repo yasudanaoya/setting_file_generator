@@ -3,8 +3,8 @@ export default {
     getAbilities() {
       return [
         {
-          key: "whiteSpace",
-          value: false,
+          key: "trimWhiteSpace",
+          value: true,
           type: "checkbox"
         },
         {
