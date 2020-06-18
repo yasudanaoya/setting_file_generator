@@ -9,8 +9,6 @@
         v-for="(ability, index) in abilities"
         :key="index"
         :ability="ability"
-        :index="index"
-        :checkedVal="checkedVal"
         @on-change="onChange"
       )
 </template>
@@ -25,12 +23,6 @@ export default {
   },
 
   mixins: [abilityList],
-
-  data() {
-    return {
-      checkedVal: []
-    };
-  },
 
   created() {
     this.abilities = this.getAbilities();

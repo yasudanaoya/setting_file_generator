@@ -27,16 +27,6 @@ export default {
     ability: {
       type: Object,
       required: true
-    },
-
-    index: {
-      type: Number,
-      required: true
-    },
-
-    checkedVal: {
-      type: Array,
-      required: true
     }
   },
 
