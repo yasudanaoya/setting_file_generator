@@ -2,13 +2,18 @@
   "ability": {
     "desc": {
       "trimWhiteSpace": "Remove wasted space at the end of sentences when saving",
-      "tabSize": "Number of spaces, equivalent to one tab"
+      "tabSize": "Number of spaces, equivalent to one tab",
+      "DnD": "Enable selection drag and drop",
+      "minimap": "Show minimap",
+      "insertNewLine": "Insert a blank line at the end when saving",
+      "trimFinalLines": "Delete blank lines other than the last line when saving"
     }
   },
 
-  "commons": {
-    "buttons": {
-      "translations": "Translations"
+  "common": {
+    "button": {
+      "translations": "Translations",
+      "generate": "Generate settings.json"
     }
   }
 }

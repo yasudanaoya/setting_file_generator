@@ -3,7 +3,7 @@
     button(
       @click.self="onClick"
     )
-      | {{ $t("commons.buttons.translations") }}
+      | {{ $t("common.button.translations") }}
 
     .language-list(
       v-if="isShow"
