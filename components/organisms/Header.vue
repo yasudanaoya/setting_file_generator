@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import SwitchLanguage from "../../molecules/SwitchLanguage";
+import SwitchLanguage from "../molecules/SwitchLanguage";
 
 export default {
   components: { SwitchLanguage }
