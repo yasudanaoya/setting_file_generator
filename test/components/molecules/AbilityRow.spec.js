@@ -11,13 +11,13 @@ const i18n = new VueI18n({
 
 describe("AbilityRow.vue", () => {
   describe("Props", () => {
-    describe("when ability type is checkbox", () => {
+    describe("when ability type is boolean", () => {
       const wrapper = mount(AbilityRow, {
         propsData: {
           ability: {
             key: "trimWhiteSpace",
             value: true,
-            type: "checkbox"
+            type: "boolean"
           }
         },
         i18n

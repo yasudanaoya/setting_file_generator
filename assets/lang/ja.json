@@ -2,13 +2,18 @@
   "ability": {
     "desc": {
       "trimWhiteSpace": "保存時に、文末の無駄なスペースを削除する",
-      "tabSize": "1つのタブに相当する、スペースの数"
+      "tabSize": "1つのタブに相当する、スペースの数",
+      "DnD": "選択範囲のドラックアンドドロップを有効にする",
+      "minimap": "ミニマップを表示します",
+      "insertNewLine": "保存時に、最終行に空行を入れる",
+      "trimFinalLines": "保存時に、最終行以外の空行を削除する"
     }
   },
 
-  "commons": {
-    "buttons": {
-      "translations": "言語"
+  "common": {
+    "button": {
+      "translations": "言語",
+      "generate": "setting.json を生成"
     }
   }
 }
