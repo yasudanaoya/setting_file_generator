@@ -38,7 +38,7 @@ export default {
 
   computed: {
     isCheckbox() {
-      return this.ability.type === "checkbox";
+      return this.ability.type === "boolean";
     },
     isNumber() {
       return this.ability.type === "number";
