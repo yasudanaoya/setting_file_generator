@@ -48,6 +48,7 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
+    "@nuxtjs/auth",
     "@nuxtjs/pwa",
     // Doc: https://github.com/nuxt-community/dotenv-module
     "@nuxtjs/dotenv",
@@ -77,6 +78,25 @@ module.exports = {
       }
     ]
   ],
+  auth: {
+    strategies: {
+      auth0: {
+        domain: process.env.DOMAIN_NAME, // 追加
+        client_id: process.env.CLIENT_ID // 追加
+      }
+    },
+    redirect: {
+      login: "/", // 未ログイン時のリダイレクト先
+      logout: "/", // ログアウト処理を実行した直後のリダイレクト先
+      callback: "/", // コールバックURL
+      home: "/" // ログイン後に遷移するページ
+    }
+  },
+  env: {
+    // auth0
+    DOMAIN_NAME: process.env.DOMAIN_NAME,
+    CLIENT_ID: process.env.CLIENT_ID
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
