@@ -51,6 +51,8 @@ module.exports = {
     "@nuxtjs/pwa",
     // Doc: https://github.com/nuxt-community/dotenv-module
     "@nuxtjs/dotenv",
+    // Doc: https://github.com/webcore-it/nuxt-clipboard2
+    "nuxt-clipboard2",
     // Doc: https://nuxt-community.github.io/nuxt-i18n/
     [
       "nuxt-i18n",

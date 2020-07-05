@@ -1,7 +1,6 @@
 <template lang="pug">
-  button(
-    @click="onClick"
-  ) {{ $t("common.button.generate") }}
+  button(@click="onClick")
+    | {{ $t("common.button.generate") }}
 </template>
 
 <script>

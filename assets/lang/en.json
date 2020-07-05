@@ -13,7 +13,9 @@
   "common": {
     "button": {
       "translations": "Translations",
-      "generate": "Generate settings.json"
+      "generate": "Generate settings.json",
+      "copy": "Copy",
+      "close": "Close"
     }
   }
 }
