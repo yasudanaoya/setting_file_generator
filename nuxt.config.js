@@ -32,7 +32,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ["plugins/prism"],
+  plugins: ["plugins/prism", "plugins/modal"],
   /*
    ** Nuxt.js dev-modules
    */
