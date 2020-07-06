@@ -38,7 +38,9 @@ export default {
       const option = {
         position: "top-center",
         duration: 3000,
-        type: "success"
+        type: "success",
+        iconPack: "fontawesome",
+        icon: "check"
       };
       const message = this.$t("common.messages.toast.success");
 
