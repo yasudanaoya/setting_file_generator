@@ -9,7 +9,6 @@
         v-for="(ability, index) in abilities"
         :key="index"
         :ability="ability"
-        @on-change="onChange"
       )
 </template>
 
@@ -26,12 +25,6 @@ export default {
 
   created() {
     this.abilities = this.getAbilities();
-  },
-
-  methods: {
-    onChange() {
-      this.$emit("on-change");
-    }
   }
 };
 </script>

@@ -21,18 +21,6 @@ export default {
   },
   mounted() {
     Prism.highlightAll();
-  },
-
-  methods: {
-    reRender() {
-      this.renderComponent = false;
-      this.$nextTick(() => {
-        this.renderComponent = true;
-      });
-      this.$nextTick(() => {
-        Prism.highlightAll();
-      });
-    }
   }
 };
 </script>

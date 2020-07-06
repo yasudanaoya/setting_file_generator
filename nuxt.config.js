@@ -19,7 +19,13 @@ module.exports = {
         content: process.env.npm_package_description || ""
       }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: "stylesheet",
+        href: "https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -32,7 +38,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ["plugins/prism"],
+  plugins: ["plugins/prism", "plugins/modal"],
   /*
    ** Nuxt.js dev-modules
    */
@@ -51,6 +57,10 @@ module.exports = {
     "@nuxtjs/pwa",
     // Doc: https://github.com/nuxt-community/dotenv-module
     "@nuxtjs/dotenv",
+    // Doc: https://github.com/webcore-it/nuxt-clipboard2
+    "nuxt-clipboard2",
+    // Doc: https://github.com/nuxt-community/modules/tree/master/packages/toast
+    "@nuxtjs/toast",
     // Doc: https://nuxt-community.github.io/nuxt-i18n/
     [
       "nuxt-i18n",

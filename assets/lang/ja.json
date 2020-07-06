@@ -13,7 +13,14 @@
   "common": {
     "button": {
       "translations": "言語",
-      "generate": "setting.json を生成"
+      "generate": "setting.json を生成",
+      "copy": "コピー",
+      "close": "閉じる"
+    },
+    "messages": {
+      "toast": {
+        "success": "コピーしました"
+      }
     }
   }
 }
