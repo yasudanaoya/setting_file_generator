@@ -1,27 +1,21 @@
 <template lang="pug">
   .page-top
-    ability-field(
-      @on-change="onChange"
-    )
-    settings-json(
-      ref="settings"
-    )
+    ability-field
+    output-button
+
+    json-code-modal
 </template>
 
 <script>
+import OutputButton from "../components/atoms/OutputButton";
 import AbilityField from "../components/organisms/AbilityField";
-import SettingsJson from "../components/organisms/SettingsJson";
+import JsonCodeModal from "../components/organisms/modal/JsonCodeModal";
 
 export default {
   components: {
+    OutputButton,
     AbilityField,
-    SettingsJson
-  },
-
-  methods: {
-    onChange() {
-      this.$refs.settings.reRender();
-    }
+    JsonCodeModal
   }
 };
 </script>

@@ -64,7 +64,6 @@ export default {
         value: this.value
       };
       this.changeSetting(param);
-      this.$emit("on-change");
     }
   }
 };
