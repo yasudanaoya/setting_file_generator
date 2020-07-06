@@ -38,7 +38,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ["plugins/prism", "plugins/modal"],
+  plugins: ["plugins/prism", "plugins/modal", "plugins/dropdown"],
   /*
    ** Nuxt.js dev-modules
    */
