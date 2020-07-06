@@ -16,6 +16,11 @@
       "generate": "Generate settings.json",
       "copy": "Copy",
       "close": "Close"
+    },
+    "messages": {
+      "toast": {
+        "success": "Copy successful!!"
+      }
     }
   }
 }

@@ -2,6 +2,7 @@
   modal(name="json-code-modal")
     button(
       v-clipboard:copy="json"
+      v-clipboard:success="onSuccess"
     ) {{ $t("common.button.copy") }}
 
     settings-json
@@ -31,6 +32,17 @@ export default {
   methods: {
     closeModal() {
       this.$modal.hide("json-code-modal");
+    },
+
+    onSuccess() {
+      const option = {
+        position: "top-center",
+        duration: 3000,
+        type: "success"
+      };
+      const message = this.$t("common.messages.toast.success");
+
+      this.$toast.show(message, option);
     }
   }
 };

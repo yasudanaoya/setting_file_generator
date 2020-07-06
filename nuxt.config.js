@@ -53,6 +53,8 @@ module.exports = {
     "@nuxtjs/dotenv",
     // Doc: https://github.com/webcore-it/nuxt-clipboard2
     "nuxt-clipboard2",
+    // Doc: https://github.com/nuxt-community/modules/tree/master/packages/toast
+    "@nuxtjs/toast",
     // Doc: https://nuxt-community.github.io/nuxt-i18n/
     [
       "nuxt-i18n",
