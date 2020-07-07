@@ -3,8 +3,12 @@
     dropdown-menu(
       v-model="isShow"
       transition="translate-fade-down"
+      ref="dropdown"
     )
-      button {{ $t("common.button.translations") }}
+      span.language-toggle(
+        :class="{'is-active': isShow }"
+      )
+        | {{ $t("common.button.translations") }}
 
       .language-list(slot="dropdown")
         .language-item(

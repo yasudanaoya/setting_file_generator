@@ -1,16 +1,5 @@
 <template lang="pug">
   .title-logo
-    span {{ title }}
+    span My
+    span Editune
 </template>
-
-<script>
-export default {
-  props: {
-    title: {
-      type: String,
-      required: false,
-      default: "My Editune"
-    }
-  }
-};
-</script>
