@@ -1,5 +1,5 @@
 <template lang="pug">
   .title-logo
-    span My
-    span Editune
+    p.title-logo-subject My
+    p.title-logo-noun Editune
 </template>

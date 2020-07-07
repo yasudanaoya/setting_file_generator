@@ -1,7 +1,6 @@
 .header {
   padding: 1vw 10vw;
   display: flex;
-  padding-bottom: 1vh;
   justify-content: space-between;
   background: #1e1e1e;
   color: #fff;
@@ -9,13 +8,34 @@
   .header-left {
     .title-logo {
       height: 100%;
-      padding-top: 0.5vw;
+      font-family: $title-font;
+      letter-spacing: 0.1vw;
+      font-size: 2.5vh;
+
+      p {
+        margin: 0;
+
+        &.title-logo-subject {
+          background: #fff;
+          color: #000;
+          border-radius: 40%;
+          font-size: 1.3vh;
+          letter-spacing: 0.15vw;
+          float: left;
+          padding: 0.3vh 0.5vw;
+        }
+
+        &.title-logo-noun {
+          margin-left: 1vw;
+        }
+      }
     }
   }
 
   .header-right {
     .switch-language {
       .language-toggle {
+        cursor: pointer;
         height: 100%;
         display: inline-block;
         font-weight: 400;
