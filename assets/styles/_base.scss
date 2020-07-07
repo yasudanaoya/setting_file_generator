@@ -3,6 +3,14 @@ body {
   background: #e3e3dd;
   color: #000;
 
+  p {
+    margin: 0;
+  }
+
+  span {
+    font-family: $base-font;
+  }
+
   .page-top {
     padding: 1vw 12vw;
   }
