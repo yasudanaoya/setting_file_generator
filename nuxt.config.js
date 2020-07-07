@@ -9,7 +9,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || "",
+    title: "My Editune",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -38,7 +38,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ["plugins/prism", "plugins/modal"],
+  plugins: ["plugins/prism", "plugins/modal", "plugins/dropdown"],
   /*
    ** Nuxt.js dev-modules
    */

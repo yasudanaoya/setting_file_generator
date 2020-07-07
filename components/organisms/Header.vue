@@ -1,16 +1,15 @@
 <template lang="pug">
   .header
-    .header-left
-      p Title
+    header-left
 
-    .header-right
-      switch-language
+    header-right
 </template>
 
 <script>
-import SwitchLanguage from "../molecules/SwitchLanguage";
+import HeaderLeft from "../molecules/HeaderLeft";
+import HeaderRight from "../molecules/HeaderRight";
 
 export default {
-  components: { SwitchLanguage }
+  components: { HeaderLeft, HeaderRight }
 };
 </script>

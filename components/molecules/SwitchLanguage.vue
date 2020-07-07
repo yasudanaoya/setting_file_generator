@@ -1,18 +1,21 @@
 <template lang="pug">
   .switch-language
-    button(
-      @click.self="onClick"
+    dropdown-menu(
+      v-model="isShow"
+      transition="translate-fade-down"
+      ref="dropdown"
     )
-      | {{ $t("common.button.translations") }}
-
-    .language-list(
-      v-if="isShow"
-    )
-      .language-item(
-        v-for="language in languages"
+      span.language-toggle(
+        :class="{'is-active': isShow }"
       )
-        nuxt-link(:to="switchLocalePath(language.lang)")
-          | {{ language.name }}
+        | {{ $t("common.button.translations") }}
+
+      .language-list(slot="dropdown")
+        .language-item(
+          v-for="language in languages"
+        )
+          nuxt-link(:to="switchLocalePath(language.lang)")
+            | {{ language.name }}
 </template>
 
 <script>
@@ -25,12 +28,6 @@ export default {
         { lang: "en", name: "English" }
       ]
     };
-  },
-
-  methods: {
-    onClick() {
-      this.isShow = !this.isShow;
-    }
   }
 };
 </script>
