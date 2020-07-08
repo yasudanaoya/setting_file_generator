@@ -14,4 +14,9 @@ body {
   .page-top {
     padding: 1vw 12vw;
   }
+
+  .wrapper {
+    min-height: 100vh;
+    position: relative;
+  }
 }
