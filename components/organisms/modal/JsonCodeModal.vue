@@ -1,14 +1,18 @@
 <template lang="pug">
-  modal(name="json-code-modal")
-    button(
-      v-clipboard:copy="json"
-      v-clipboard:success="onSuccess"
-    ) {{ $t("common.button.copy") }}
-
+  modal.json-code-modal(
+    name="json-code-modal"
+    height="auto"
+    adaptive
+  )
     settings-json
 
-    button(@click="closeModal")
-      | {{ $t("common.button.close") }}
+    .modal-footer-btns
+      button.dialog-btn(@click="closeModal")
+        | {{ $t("common.button.close") }}
+      button.dialog-btn(
+        v-clipboard:copy="json"
+        v-clipboard:success="onSuccess"
+      ) {{ $t("common.button.copy") }}
 </template>
 
 <script>
