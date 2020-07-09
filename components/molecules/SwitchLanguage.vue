@@ -5,7 +5,7 @@
       transition="translate-fade-down"
       ref="dropdown"
     )
-      span.language-toggle(
+      span.language-toggle.app-btn(
         :class="{'is-active': isShow }"
       )
         | {{ $t("common.button.translations") }}
@@ -15,7 +15,7 @@
           v-for="language in languages"
         )
           nuxt-link(:to="switchLocalePath(language.lang)")
-            | {{ language.name }}
+            div(@click="onClickLink") {{ language.name }}
 </template>
 
 <script>
@@ -24,10 +24,16 @@ export default {
     return {
       isShow: false,
       languages: [
-        { lang: "ja", name: "Japanese" },
+        { lang: "ja", name: "日本語" },
         { lang: "en", name: "English" }
       ]
     };
+  },
+
+  methods: {
+    onClickLink() {
+      this.isShow = false;
+    }
   }
 };
 </script>
