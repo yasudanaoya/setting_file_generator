@@ -3,6 +3,7 @@
     name="json-code-modal"
     height="auto"
     adaptive
+    transition="scale"
   )
     settings-json
 

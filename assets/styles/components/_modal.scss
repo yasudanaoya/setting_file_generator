@@ -21,3 +21,17 @@
     }
   }
 }
+
+.scale-enter-active,
+.scale-leave-active,
+.scale-leave-to {
+  transition: all 1s;
+}
+
+.scale-enter {
+  opacity: 0;
+}
+
+.scale-leave-active {
+  transform: scale(0.3);
+}

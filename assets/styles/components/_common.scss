@@ -17,4 +17,12 @@
       user-select: none;
     }
   }
+
+  div.code-toolbar > .toolbar {
+    opacity: 1 !important;
+
+    span {
+      color: inherit !important;
+    }
+  }
 }
