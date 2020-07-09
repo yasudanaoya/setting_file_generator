@@ -1,5 +1,5 @@
 <template lang="pug">
-  button(@click="onClick")
+  span.app-btn.output-btn(@click="onClick")
     | {{ $t("common.button.generate") }}
 </template>
 

@@ -1,0 +1,28 @@
+.copyright {
+  a.github-link {
+    text-decoration: underline;
+    margin: 0 1vw;
+
+    &:visited {
+      color: #fff;
+    }
+  }
+}
+
+.settings-json {
+  padding: 1vh;
+
+  pre.language-json {
+    code.language-json {
+      user-select: none;
+    }
+  }
+
+  div.code-toolbar > .toolbar {
+    opacity: 1 !important;
+
+    span {
+      color: inherit !important;
+    }
+  }
+}
