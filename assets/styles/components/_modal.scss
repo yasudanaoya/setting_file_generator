@@ -22,7 +22,10 @@
   }
 }
 
-.scale-enter-active,
+.scale-enter-active {
+  transition: all 0.5s;
+}
+
 .scale-leave-active,
 .scale-leave-to {
   transition: all 1s;
