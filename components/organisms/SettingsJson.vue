@@ -1,6 +1,6 @@
 <template lang="pug">
   .settings-json(v-if="renderComponent")
-    pre(data-label="settings.json")
+    pre(data-label="setting.json")
       code(class="language-json line-numbers code-toolbar")
         | {{ settingsJson }}
 </template>
