@@ -35,16 +35,8 @@
       .language-toggle {
         width: 9vw;
         padding-right: 0.5em;
-
-        &.is-active {
-          background: #fff;
-          color: #000;
-        }
-
-        &:hover {
-          background: #fff;
-          color: #000;
-        }
+        background: #fff;
+        color: #000;
 
         &::after {
           display: inline-block;

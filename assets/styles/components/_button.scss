@@ -12,12 +12,11 @@
   text-align: center;
 
   &.output-btn {
-    color: #000;
     border-color: #000;
+    background: #cfdfe4;
 
     &:hover {
-      background: #000;
-      color: #fff !important;
+      background: #cbbac4;
     }
   }
 }

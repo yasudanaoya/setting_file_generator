@@ -5,9 +5,7 @@
       transition="translate-fade-down"
       ref="dropdown"
     )
-      span.language-toggle.app-btn(
-        :class="{'is-active': isShow }"
-      )
+      span.language-toggle.app-btn
         | {{ $t("common.button.translations") }}
 
       .language-list(slot="dropdown")
